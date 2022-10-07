@@ -1,7 +1,11 @@
 import { Text, StyleSheet } from "react-native";
 import Colors from "../constants/colors";
-export default function Title() {
-  return <Text style={styles.title}>Opponent's Guess</Text>;
+
+interface TitleProps {
+  children: string;
+}
+export default function Title(props: TitleProps) {
+  return <Text style={styles.title}>{props.children}</Text>;
 }
 
 const styles = StyleSheet.create({

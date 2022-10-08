@@ -27,11 +27,7 @@ let minBoundary = 1;
 let maxBoundary = 100;
 
 export default function GameScreen(props: GameScreenProps) {
-  const initialGuess = generateRandomBetween(
-    minBoundary,
-    maxBoundary,
-    props.userNumber
-  );
+  const initialGuess = generateRandomBetween(1, 100, props.userNumber);
 
   const [currentGuess, setCurrentGuess] = useState<number>(initialGuess);
 
